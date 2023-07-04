@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@/providers/ThemeProvider'
-import '../globals.css'
+import { Layout } from '@/components/Layout'
+import "../globals.css"
 
 export const metadata = {
   title: 'Twitch Next App',
@@ -13,11 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <ThemeProvider>
-      <html lang="en">
-        <body>
-          {children}
-        </body>
-      </html>
+      <Layout>
+        {children}
+      </Layout>
     </ThemeProvider>
   )
 }
